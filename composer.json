@@ -1,17 +1,21 @@
 {
   "name": "lvinokurov/laravel-rusguard",
   "description": "Laravel-rusguard - it's connector between rusguard system and web-service",
+  "license": "MIT",
   "authors": [
     {
       "name": "Vinokurov Leonid",
       "email": "foks961@yandex.ru"
     }
   ],
-  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "lVinokurov\\RusGuard\\": "src/"
     }
   },
-  "require": {}
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
