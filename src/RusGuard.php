@@ -4,8 +4,20 @@ namespace  lVinokurov\RusGuard;
 
 class RusGuard
 {
-  public function hello(String $title)
+  protected $login;
+  protected $password;
+  protected $url;
+
+  public function __construct()
   {
-    return $title;
+    $this->login = config('rusguard.login');
+    $this->password = config('rusguard.password');
+    $this->url = config('rusguard.url');
   }
+
+  public function buildClient()
+  {
+    
+  }
+
 }

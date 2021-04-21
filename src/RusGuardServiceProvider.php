@@ -12,7 +12,11 @@ class RusGuardServiceProvider extends ServiceProvider
    *
    */
   public function boot()
-  {}
+  {
+    $this->publishes([
+      __DIR__.'/../config/rusguard.php' => config_path('rusguard.php'),
+    ]);
+  }
 
   /**
    * Register the service provider.
