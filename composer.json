@@ -14,7 +14,14 @@
     },
     "psr-4": {
       "lVinokurov\\RusGuard\\": "src/"
-    }
+    },
+    "classmap": [
+      "src/Helpers/ServiceType",
+      "src/Helpers/StructType",
+      "src/Helpers/EnumType",
+      "src/Helpers/ArrayType",
+      "src/Helpers/ClassMap.php"
+    ]
   },
   "require": {
     "php": ">=7.4.0",

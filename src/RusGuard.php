@@ -2,22 +2,30 @@
 
 namespace  lVinokurov\RusGuard;
 
+use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
+
 class RusGuard
 {
-  protected $login;
-  protected $password;
-  protected $url;
+  protected $options;
 
   public function __construct()
   {
-    $this->login = config('rusguard.login');
-    $this->password = config('rusguard.password');
-    $this->url = config('rusguard.url');
+
   }
 
   public function buildClient()
   {
-    
+    $this->setOptions();
+
+    return $this;
   }
 
+  protected function setOptions()
+  {
+    $this->options = config('rusguard.options');
+
+    foreach($this->options as $name => $val){
+      dd($name);
+    }
+  }
 }

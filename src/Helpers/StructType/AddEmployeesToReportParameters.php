@@ -1,0 +1,103 @@
+<?php
+
+declare(strict_types=1);
+
+namespace StructType;
+
+use InvalidArgumentException;
+use WsdlToPhp\PackageBase\AbstractStructBase;
+
+/**
+ * This class stands for AddEmployeesToReportParameters StructType
+ * @subpackage Structs
+ */
+class AddEmployeesToReportParameters extends AbstractStructBase
+{
+    /**
+     * The reportId
+     * Meta information extracted from the WSDL
+     * - base: xs:string
+     * - minOccurs: 0
+     * - nillable: true
+     * - pattern: [\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}
+     * - type: tns:guid
+     * @var string|null
+     */
+    protected ?string $reportId = null;
+    /**
+     * The employeeIds
+     * Meta information extracted from the WSDL
+     * - minOccurs: 0
+     * - nillable: true
+     * @var \ArrayType\ArrayOfguid|null
+     */
+    protected ?\ArrayType\ArrayOfguid $employeeIds = null;
+    /**
+     * Constructor method for AddEmployeesToReportParameters
+     * @uses AddEmployeesToReportParameters::setReportId()
+     * @uses AddEmployeesToReportParameters::setEmployeeIds()
+     * @param string $reportId
+     * @param \ArrayType\ArrayOfguid $employeeIds
+     */
+    public function __construct(?string $reportId = null, ?\ArrayType\ArrayOfguid $employeeIds = null)
+    {
+        $this
+            ->setReportId($reportId)
+            ->setEmployeeIds($employeeIds);
+    }
+    /**
+     * Get reportId value
+     * @return string|null
+     */
+    public function getReportId(): ?string
+    {
+        return $this->reportId;
+    }
+    /**
+     * Set reportId value
+     * @param string $reportId
+     * @return \StructType\AddEmployeesToReportParameters
+     */
+    public function setReportId(?string $reportId = null): self
+    {
+        // validation for constraint: string
+        if (!is_null($reportId) && !is_string($reportId)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($reportId, true), gettype($reportId)), __LINE__);
+        }
+        // validation for constraint: pattern([\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12})
+        if (!is_null($reportId) && !preg_match('/[\\da-fA-F]{8}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{12}/', $reportId)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a literal that is among the set of character sequences denoted by the regular expression /[\\da-fA-F]{8}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{12}/', var_export($reportId, true)), __LINE__);
+        }
+        $this->reportId = $reportId;
+        
+        return $this;
+    }
+    /**
+     * Get employeeIds value
+     * An additional test has been added (isset) before returning the property value as
+     * this property may have been unset before, due to the fact that this property is
+     * removable from the request (nillable=true+minOccurs=0)
+     * @return \ArrayType\ArrayOfguid|null
+     */
+    public function getEmployeeIds(): ?\ArrayType\ArrayOfguid
+    {
+        return isset($this->employeeIds) ? $this->employeeIds : null;
+    }
+    /**
+     * Set employeeIds value
+     * This property is removable from request (nillable=true+minOccurs=0), therefore
+     * if the value assigned to this property is null, it is removed from this object
+     * @param \ArrayType\ArrayOfguid $employeeIds
+     * @return \StructType\AddEmployeesToReportParameters
+     */
+    public function setEmployeeIds(?\ArrayType\ArrayOfguid $employeeIds = null): self
+    {
+        if (is_null($employeeIds) || (is_array($employeeIds) && empty($employeeIds))) {
+            unset($this->employeeIds);
+        } else {
+            $this->employeeIds = $employeeIds;
+        }
+        
+        return $this;
+    }
+}

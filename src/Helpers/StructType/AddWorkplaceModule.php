@@ -1,0 +1,139 @@
+<?php
+
+declare(strict_types=1);
+
+namespace StructType;
+
+use InvalidArgumentException;
+use WsdlToPhp\PackageBase\AbstractStructBase;
+
+/**
+ * This class stands for AddWorkplaceModule StructType
+ * @subpackage Structs
+ */
+class AddWorkplaceModule extends AbstractStructBase
+{
+    /**
+     * The workplaceId
+     * Meta information extracted from the WSDL
+     * - base: xs:string
+     * - minOccurs: 0
+     * - nillable: true
+     * - pattern: [\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}
+     * - type: tns:guid
+     * @var string|null
+     */
+    protected ?string $workplaceId = null;
+    /**
+     * The moduleType
+     * Meta information extracted from the WSDL
+     * - minOccurs: 0
+     * @var string|null
+     */
+    protected ?string $moduleType = null;
+    /**
+     * The data
+     * Meta information extracted from the WSDL
+     * - minOccurs: 0
+     * - nillable: true
+     * @var \StructType\WorkplaceModuleSaveData|null
+     */
+    protected ?\StructType\WorkplaceModuleSaveData $data = null;
+    /**
+     * Constructor method for AddWorkplaceModule
+     * @uses AddWorkplaceModule::setWorkplaceId()
+     * @uses AddWorkplaceModule::setModuleType()
+     * @uses AddWorkplaceModule::setData()
+     * @param string $workplaceId
+     * @param string $moduleType
+     * @param \StructType\WorkplaceModuleSaveData $data
+     */
+    public function __construct(?string $workplaceId = null, ?string $moduleType = null, ?\StructType\WorkplaceModuleSaveData $data = null)
+    {
+        $this
+            ->setWorkplaceId($workplaceId)
+            ->setModuleType($moduleType)
+            ->setData($data);
+    }
+    /**
+     * Get workplaceId value
+     * @return string|null
+     */
+    public function getWorkplaceId(): ?string
+    {
+        return $this->workplaceId;
+    }
+    /**
+     * Set workplaceId value
+     * @param string $workplaceId
+     * @return \StructType\AddWorkplaceModule
+     */
+    public function setWorkplaceId(?string $workplaceId = null): self
+    {
+        // validation for constraint: string
+        if (!is_null($workplaceId) && !is_string($workplaceId)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($workplaceId, true), gettype($workplaceId)), __LINE__);
+        }
+        // validation for constraint: pattern([\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12})
+        if (!is_null($workplaceId) && !preg_match('/[\\da-fA-F]{8}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{12}/', $workplaceId)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a literal that is among the set of character sequences denoted by the regular expression /[\\da-fA-F]{8}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{12}/', var_export($workplaceId, true)), __LINE__);
+        }
+        $this->workplaceId = $workplaceId;
+        
+        return $this;
+    }
+    /**
+     * Get moduleType value
+     * @return string|null
+     */
+    public function getModuleType(): ?string
+    {
+        return $this->moduleType;
+    }
+    /**
+     * Set moduleType value
+     * @uses \EnumType\WorkplaceModuleType::valueIsValid()
+     * @uses \EnumType\WorkplaceModuleType::getValidValues()
+     * @throws InvalidArgumentException
+     * @param string $moduleType
+     * @return \StructType\AddWorkplaceModule
+     */
+    public function setModuleType(?string $moduleType = null): self
+    {
+        // validation for constraint: enumeration
+        if (!\EnumType\WorkplaceModuleType::valueIsValid($moduleType)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\WorkplaceModuleType', is_array($moduleType) ? implode(', ', $moduleType) : var_export($moduleType, true), implode(', ', \EnumType\WorkplaceModuleType::getValidValues())), __LINE__);
+        }
+        $this->moduleType = $moduleType;
+        
+        return $this;
+    }
+    /**
+     * Get data value
+     * An additional test has been added (isset) before returning the property value as
+     * this property may have been unset before, due to the fact that this property is
+     * removable from the request (nillable=true+minOccurs=0)
+     * @return \StructType\WorkplaceModuleSaveData|null
+     */
+    public function getData(): ?\StructType\WorkplaceModuleSaveData
+    {
+        return isset($this->data) ? $this->data : null;
+    }
+    /**
+     * Set data value
+     * This property is removable from request (nillable=true+minOccurs=0), therefore
+     * if the value assigned to this property is null, it is removed from this object
+     * @param \StructType\WorkplaceModuleSaveData $data
+     * @return \StructType\AddWorkplaceModule
+     */
+    public function setData(?\StructType\WorkplaceModuleSaveData $data = null): self
+    {
+        if (is_null($data) || (is_array($data) && empty($data))) {
+            unset($this->data);
+        } else {
+            $this->data = $data;
+        }
+        
+        return $this;
+    }
+}
