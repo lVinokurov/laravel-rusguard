@@ -9,12 +9,25 @@
     }
   ],
   "autoload": {
+    "psr-0": {
+      "lVinokurov\\RusGuard\\": "src/"
+    },
     "psr-4": {
       "lVinokurov\\RusGuard\\": "src/"
     }
   },
   "require": {
     "php": ">=7.4.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "lVinokurov\\RusGuard\\RusGuardServiceProvider"
+      ],
+      "aliases": {
+        "RusGuard": "lVinokurov\\RusGuard\\Facades\\RusGuard"
+      }
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true
