@@ -50,12 +50,9 @@ class AcsEmployeeSaveData extends AcsEmployeeFullBase
      * @param bool $isChangeLocked
      * @param bool $isChangePin
      */
-    public function __construct(?string $employeePositionID = null, $firstName = null, $middleName = null, $lastName = null, ?bool $isChangeLocked = null, ?bool $isChangePin = null)
+    public function __construct(?string $employeePositionID = null, ?bool $isChangeLocked = null, ?bool $isChangePin = null)
     {
         $this
-            ->setFirstName($firstName)
-            ->setLastName($middleName)
-            ->setSecondName($lastName)
             ->setEmployeePositionID($employeePositionID)
             ->setIsChangeLocked($isChangeLocked)
             ->setIsChangePin($isChangePin);
@@ -93,7 +90,7 @@ class AcsEmployeeSaveData extends AcsEmployeeFullBase
         } else {
             $this->EmployeePositionID = $employeePositionID;
         }
-        
+
         return $this;
     }
     /**
@@ -116,7 +113,7 @@ class AcsEmployeeSaveData extends AcsEmployeeFullBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($isChangeLocked, true), gettype($isChangeLocked)), __LINE__);
         }
         $this->IsChangeLocked = $isChangeLocked;
-        
+
         return $this;
     }
     /**
@@ -139,7 +136,7 @@ class AcsEmployeeSaveData extends AcsEmployeeFullBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($isChangePin, true), gettype($isChangePin)), __LINE__);
         }
         $this->IsChangePin = $isChangePin;
-        
+
         return $this;
     }
 }

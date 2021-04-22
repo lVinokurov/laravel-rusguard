@@ -121,7 +121,7 @@ class AddAcsEmployeeGroup extends AbstractStructBase
         } else {
             $this->parentId = $parentId;
         }
-        
+
         return $this;
     }
     /**
@@ -153,7 +153,7 @@ class AddAcsEmployeeGroup extends AbstractStructBase
         } else {
             $this->name = $name;
         }
-        
+
         return $this;
     }
     /**
@@ -185,7 +185,7 @@ class AddAcsEmployeeGroup extends AbstractStructBase
         } else {
             $this->comment = $comment;
         }
-        
+
         return $this;
     }
     /**
@@ -213,7 +213,7 @@ class AddAcsEmployeeGroup extends AbstractStructBase
         } else {
             $this->tagIDs = $tagIDs;
         }
-        
+
         return $this;
     }
     /**
@@ -236,7 +236,7 @@ class AddAcsEmployeeGroup extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($isGuestGroup, true), gettype($isGuestGroup)), __LINE__);
         }
         $this->isGuestGroup = $isGuestGroup;
-        
+
         return $this;
     }
     /**
@@ -268,7 +268,7 @@ class AddAcsEmployeeGroup extends AbstractStructBase
         } else {
             $this->groupCode = $groupCode;
         }
-        
+
         return $this;
     }
 }

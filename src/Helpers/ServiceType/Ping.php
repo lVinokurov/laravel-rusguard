@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace ServiceType;
 
 use SoapFault;
-use WsdlToPhp\PackageBase\AbstractSoapClientBase;
+use lVinokurov\RusGuard\Helpers\Base\AbstractSoapClientBase;
 
 /**
  * This class stands for Ping ServiceType
@@ -27,11 +27,11 @@ class Ping extends AbstractSoapClientBase
             $this->setResult($resultPing = $this->getSoapClient()->__soapCall('Ping', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultPing;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }

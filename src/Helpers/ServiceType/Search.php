@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace ServiceType;
 
 use SoapFault;
-use WsdlToPhp\PackageBase\AbstractSoapClientBase;
+use lVinokurov\RusGuard\Helpers\Base\AbstractSoapClientBase;
 
 /**
  * This class stands for Search ServiceType

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace ServiceType;
 
 use SoapFault;
-use WsdlToPhp\PackageBase\AbstractSoapClientBase;
+use lVinokurov\RusGuard\Helpers\Base\AbstractSoapClientBase;
 
 /**
  * This class stands for Assign ServiceType
@@ -27,11 +27,11 @@ class Assign extends AbstractSoapClientBase
             $this->setResult($resultAssignAcsKeyForEmployee = $this->getSoapClient()->__soapCall('AssignAcsKeyForEmployee', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultAssignAcsKeyForEmployee;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }

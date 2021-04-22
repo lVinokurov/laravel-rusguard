@@ -25,6 +25,7 @@
   },
   "require": {
     "php": ">=7.4.0",
+    "ext-soap": "*",
     "wsdltophp/packagebase": "^2.0"
   },
   "extra": {
