@@ -70,7 +70,7 @@ class RusGuard
         $result = $add->AddAcsEmployeeGroup($structure);
 
         if (!$result) {
-            $this->logger->critical($add->getLastError())->getMessage());
+            $this->logger->critical($add->getLastError())->getMessage();
       throw new \Exception(current($add->getLastError())->getMessage());
     }
 
@@ -96,7 +96,7 @@ class RusGuard
         );
 
         if (!$result) {
-            $this->logger->critical($add->getLastError())->getMessage());
+            $this->logger->critical($add->getLastError())->getMessage();
       throw new \Exception(current($add->getLastError())->getMessage());
     }
 
@@ -113,7 +113,7 @@ class RusGuard
         $result = $lock->LockAcsEmployee($structure);
 
         if (!$result) {
-            $this->logger->critical($add->getLastError())->getMessage());
+            $this->logger->critical($add->getLastError())->getMessage();
       throw new \Exception(current($add->getLastError())->getMessage());
     }
 
@@ -128,7 +128,7 @@ class RusGuard
         $result = $set->SetAcsEmployeePhoto($structure);
 
         if (!$result) {
-            $this->logger->critical($set->getLastError())->getMessage());
+            $this->logger->critical($set->getLastError())->getMessage();
       throw new \Exception(current($set->getLastError())->getMessage());
     }
 
