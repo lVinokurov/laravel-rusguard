@@ -1,8 +1,6 @@
 <?php
 
 return [
-
-
     'upload' => true,
     'group_father' => '',
     'log_stack' => [],
