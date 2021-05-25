@@ -9,6 +9,7 @@ use ServiceType\Add;
 use ServiceType\Assign;
 use ServiceType\Lock;
 use ServiceType\Set;
+use StructType\AcsKeySaveData;
 use StructType\AddAcsEmployeeGroup;
 use StructType\AssignAcsKeyForEmployee;
 use StructType\LockAcsEmployee;
@@ -65,14 +66,14 @@ class RusGuard
      */
     public function createGroup(array $args)
     {
-        $add = new \lVinokurov\RusGuard\Helpers\Base\AbstractSoapClientBase($this->options);
+        $add = new Add($this->options);
 
         $structure = $this->setStructure(new AddAcsEmployeeGroup(), $args);
 
         $result = $add->AddAcsEmployeeGroup($structure);
 
         if (!$result) {
-            $this->logger->critical($add->getLastError())->getMessage();
+            $this->logger->critical($add->getLastError()->getMessage());
             throw new \Exception(current($add->getLastError())->getMessage());
         }
 
@@ -98,7 +99,7 @@ class RusGuard
         );
 
         if (!$result) {
-            $this->logger->critical($add->getLastError())->getMessage();
+            $this->logger->critical($add->getLastError()->getMessage());
             throw new \Exception(current($add->getLastError())->getMessage());
         }
 
@@ -115,7 +116,7 @@ class RusGuard
         $result = $lock->LockAcsEmployee($structure);
 
         if (!$result) {
-            $this->logger->critical($lock->getLastError())->getMessage();
+            $this->logger->critical($lock->getLastError()->getMessage());
             throw new \Exception(current($lock->getLastError())->getMessage());
         }
 
@@ -130,7 +131,7 @@ class RusGuard
         $result = $set->SetAcsEmployeePhoto($structure);
 
         if (!$result) {
-            $this->logger->critical($set->getLastError())->getMessage();
+            $this->logger->critical($set->getLastError()->getMessage());
             throw new \Exception(current($set->getLastError())->getMessage());
         }
 
@@ -140,12 +141,15 @@ class RusGuard
     protected function addKeyForUser(array $args)
     {
         $assign = new Assign($this->options);
-        $structure = $this->setStructure(new AssignAcsKeyForEmployee(), $args);
 
+        if(isset($args['key_data']))
+            $args['key_data'] = $this->setStructure(new AcsKeySaveData(), $args['key_data']);
+
+        $structure = $this->setStructure(new AssignAcsKeyForEmployee(), $args);
         $result = $assign->AssignAcsKeyForEmployee($structure);
 
         if (!$result) {
-            $this->logger->critical($assign->getLastError())->getMessage();
+            $this->logger->critical($assign->getLastError()->getMessage());
             throw new \Exception(current($assign->getLastError())->getMessage());
         }
 
