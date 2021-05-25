@@ -6,9 +6,11 @@ use ArrayType\ArrayOfguid;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use ServiceType\Add;
+use ServiceType\Assign;
 use ServiceType\Lock;
 use ServiceType\Set;
 use StructType\AddAcsEmployeeGroup;
+use StructType\AssignAcsKeyForEmployee;
 use StructType\LockAcsEmployee;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -71,8 +73,8 @@ class RusGuard
 
         if (!$result) {
             $this->logger->critical($add->getLastError())->getMessage();
-      throw new \Exception(current($add->getLastError())->getMessage());
-    }
+            throw new \Exception(current($add->getLastError())->getMessage());
+        }
 
         return $add->getResult()->getAddAcsEmployeeGroupResult();
     }
@@ -81,7 +83,7 @@ class RusGuard
      * @param ...$args
      *
      * fisrt_name - required
-     * last_name - required
+     * last_name - required5
      * middle_name
      *
      *
@@ -97,8 +99,8 @@ class RusGuard
 
         if (!$result) {
             $this->logger->critical($add->getLastError())->getMessage();
-      throw new \Exception(current($add->getLastError())->getMessage());
-    }
+            throw new \Exception(current($add->getLastError())->getMessage());
+        }
 
         return $add->getResult()->getAddAcsEmployeeResult();
     }
@@ -113,9 +115,9 @@ class RusGuard
         $result = $lock->LockAcsEmployee($structure);
 
         if (!$result) {
-            $this->logger->critical($add->getLastError())->getMessage();
-      throw new \Exception(current($add->getLastError())->getMessage());
-    }
+            $this->logger->critical($lock->getLastError())->getMessage();
+            throw new \Exception(current($lock->getLastError())->getMessage());
+        }
 
         return true;
     }
@@ -129,8 +131,23 @@ class RusGuard
 
         if (!$result) {
             $this->logger->critical($set->getLastError())->getMessage();
-      throw new \Exception(current($set->getLastError())->getMessage());
+            throw new \Exception(current($set->getLastError())->getMessage());
+        }
+
+        return true;
     }
+
+    protected function addKeyForUser(array $args)
+    {
+        $assign = new Assign($this->options);
+        $structure = $this->setStructure(new AssignAcsKeyForEmployee(), $args);
+
+        $result = $assign->AssignAcsKeyForEmployee($structure);
+
+        if (!$result) {
+            $this->logger->critical($assign->getLastError())->getMessage();
+            throw new \Exception(current($assign->getLastError())->getMessage());
+        }
 
         return true;
     }
