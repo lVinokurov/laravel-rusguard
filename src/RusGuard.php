@@ -13,6 +13,7 @@ use StructType\AcsKeySaveData;
 use StructType\AddAcsEmployeeGroup;
 use StructType\AssignAcsKeyForEmployee;
 use StructType\LockAcsEmployee;
+use StructType\SetUseEmployeeGroupParentAccessLevel;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
 class RusGuard
@@ -80,6 +81,21 @@ class RusGuard
         return $add->getResult()->getAddAcsEmployeeGroupResult();
     }
 
+    public function SetUseEmployeeGroupParentAccessLevel(array $args)
+    {
+        $set = new Set($this->options);
+
+        $structure = $this->setStructure(new SetUseEmployeeGroupParentAccessLevel(), $args);
+        $result = $set->SetUseEmployeeGroupParentAccessLevel($structure);
+
+        if (!$result) {
+            $this->logger->critical($set->getLastError()->getMessage());
+            throw new \Exception(current($set->getLastError())->getMessage());
+        }
+
+        return true;
+    }
+
     /**
      * @param ...$args
      *
@@ -138,7 +154,7 @@ class RusGuard
         return true;
     }
 
-    protected function addKeyForUser(array $args)
+    public function addKeyForUser(array $args)
     {
         $assign = new Assign($this->options);
 
