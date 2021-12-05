@@ -3,163 +3,246 @@
 namespace lVinokurov\RusGuard;
 
 use ArrayType\ArrayOfguid;
+use ArrayType\ArrayOfLogMsgSubType;
+use ArrayType\ArrayOfLogMsgType;
+use Exception;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use lVinokurov\RusGuard\Dto\Employee\CreateEmployeeDto;
+use lVinokurov\RusGuard\Dto\Events\GetEventsDto;
+use lVinokurov\RusGuard\Dto\Group\CreateGroupDto;
 use ServiceType\Add;
 use ServiceType\Assign;
+use ServiceType\Get;
 use ServiceType\Lock;
 use ServiceType\Set;
+use StructType\AcsEmployeeGroup;
+use StructType\AcsEmployeeSlim;
 use StructType\AcsKeySaveData;
 use StructType\AddAcsEmployeeGroup;
 use StructType\AssignAcsKeyForEmployee;
+use StructType\GetEvents;
+use StructType\GetEventsByDeviceIDs;
+use StructType\GetLogMessageSubtypes;
+use StructType\GetLogMessageTypes;
+use StructType\GetSwitchedOffLogMessageSubtypesOfWorkplace;
 use StructType\LockAcsEmployee;
 use StructType\SetUseEmployeeGroupParentAccessLevel;
 
 class RusGuard
 {
-    protected $options;
-    protected $logger;
+  protected $options;
 
-    public function __construct()
-    {
-        $this->buildClient();
-        $this->logger = Log::stack(config('rusguard.log_stack'));
+  public function __construct()
+  {
+    $this->buildClient();
+  }
+
+  public function buildClient(): RusGuard
+  {
+    if (!$this->options)
+      $this->setOptions();
+
+    return $this;
+  }
+
+  /**
+   * Установка начальных настроек
+   */
+  protected function setOptions()
+  {
+    $config_options = config('rusguard.options');
+
+    foreach ($config_options as $name => $val) {
+      $name_const = Str::upper('wsdl_' . $name);
+      if (defined('WsdlToPhp\PackageBase\AbstractSoapClientBase::' . $name_const))
+        $this->options['wsdl_' . $name] = $val;
+    }
+    // Добавление classmap
+    $this->options['wsdl_classmap'] = \ClassMap::get();
+  }
+
+  /**
+   * Создание структуры
+   *
+   * @param $object
+   * @param array $args
+   * @return mixed
+   */
+  protected function setStructure($object, array $args)
+  {
+    foreach ($args as $key => $val) {
+      $method = 'set' . Str::studly($key);
+      if (method_exists($object, $method)) {
+        $object->$method($val);
+      }
     }
 
-    public function buildClient()
-    {
-        if (!$this->options)
-            $this->setOptions();
+    return $object;
+  }
 
-        return $this;
+  /**
+   * Создание работника
+   *
+   * @param CreateEmployeeDto $dto
+   * @param string $group_id
+   * @return AcsEmployeeSlim|null
+   * @throws Exception
+   */
+  public function createEmployee(CreateEmployeeDto $dto, string $group_id)
+  {
+    $add = new Add($this->options);
+
+    $structure = $this->setStructure(new \StructType\AcsEmployeeSaveData(), (array) $dto);
+    $result = $add->AddAcsEmployee(
+      new \StructType\AddAcsEmployee($group_id, $structure)
+    );
+
+    if (!$result) {
+      throw new Exception($add->getLastError());
     }
 
-    protected function setOptions()
-    {
-        $config_options = config('rusguard.options');
+    return $add->getResult()->getAddAcsEmployeeResult();
+  }
 
-        foreach ($config_options as $name => $val) {
-            $name_const = Str::upper('wsdl_' . $name);
-            if (defined('WsdlToPhp\PackageBase\AbstractSoapClientBase::' . $name_const))
-                $this->options['wsdl_' . $name] = $val;
-        }
-        // Добавление classmap
-        $this->options['wsdl_classmap'] = \ClassMap::get();
+  /**
+   * Блокировка или разблокировка работника
+   *
+   * @param array $args
+   * @return bool
+   * @throws Exception
+   */
+  public function lockEmployee(array $args)
+  {
+    $lock = new Lock($this->options);
+    $args['ids'] = new ArrayOfguid(is_array($args['ids']) ? $args['ids'] : [$args['ids']]);
 
-        return;
+    $structure = $this->setStructure(new LockAcsEmployee(), $args);
+
+    $result = $lock->LockAcsEmployee($structure);
+
+    if (!$result) {
+      throw new Exception($lock->getLastError());
     }
 
-    protected function setStructure($object, array $args)
-    {
-        foreach ($args as $key => $val) {
-            $method = 'set' . Str::studly($key);
-            if (method_exists($object, $method)) {
-                $object->$method($val);
-            }
-        }
+    return true;
+  }
 
-        return $object;
+  /**
+   * Создание фото для работника
+   *
+   * @param array $args
+   * @return bool
+   * @throws Exception
+   */
+  public function createEmployeePhoto(array $args)
+  {
+    $set = new Set($this->options);
+    $structure = $this->setStructure(new \StructType\SetAcsEmployeePhoto(), $args);
+
+    $result = $set->SetAcsEmployeePhoto($structure);
+
+    if (!$result) {
+      throw new Exception($set->getLastError());
     }
 
-    // Employee
+    return true;
+  }
 
-    public function createEmployee($group_id, array $args)
-    {
-        $add = new Add($this->options);
+  /**
+   * Добавление ключа для работника
+   *
+   * @param array $args
+   * @return bool
+   * @throws Exception
+   */
+  public function addKeyForEmployee(array $args)
+  {
+    $assign = new Assign($this->options);
 
-        $structure = $this->setStructure(new \StructType\AcsEmployeeSaveData(), $args);
-        $result = $add->AddAcsEmployee(
-            new \StructType\AddAcsEmployee($group_id, $structure)
-        );
+    if (isset($args['key_data']))
+      $args['key_data'] = $this->setStructure(new AcsKeySaveData(), $args['key_data']);
 
-        if (!$result) {
-            $this->logger->critical($add->getLastError()->getMessage());
-            throw new \Exception(current($add->getLastError())->getMessage());
-        }
+    $structure = $this->setStructure(new AssignAcsKeyForEmployee(), $args);
+    $result = $assign->AssignAcsKeyForEmployee($structure);
 
-        return $add->getResult()->getAddAcsEmployeeResult();
+    if (!$result) {
+      throw new Exception($assign->getLastError());
     }
 
-    public function lockEmployee(array $args)
-    {
-        $lock = new Lock($this->options);
-        $args['ids'] = new ArrayOfguid(is_array($args['ids']) ? $args['ids'] : [$args['ids']]);
+    return true;
+  }
 
-        $structure = $this->setStructure(new LockAcsEmployee(), $args);
+  /**
+   * Создание группы
+   *
+   * @param CreateGroupDto $dto
+   * @return AcsEmployeeGroup|null
+   * @throws Exception
+   */
+  public function createGroup(CreateGroupDto $dto)
+  {
+    $add = new Add($this->options);
 
-        $result = $lock->LockAcsEmployee($structure);
+    $structure = $this->setStructure(new AddAcsEmployeeGroup(), (array) $dto);
 
-        if (!$result) {
-            $this->logger->critical($lock->getLastError()->getMessage());
-            throw new \Exception(current($lock->getLastError())->getMessage());
-        }
+    $result = $add->AddAcsEmployeeGroup($structure);
 
-        return true;
+    if (!$result) {
+      throw new Exception($add->getLastError());
     }
 
-    public function createEmployeePhoto(array $args)
-    {
-        $set = new Set($this->options);
-        $structure = $this->setStructure(new \StructType\SetAcsEmployeePhoto(), $args);
+    return $add->getResult()->getAddAcsEmployeeGroupResult();
+  }
 
-        $result = $set->SetAcsEmployeePhoto($structure);
+  /**
+   * Установка галочки для группы наследовать права с родительской
+   *
+   * @param string $group_id
+   * @param bool $is_use_parent_access_level
+   * @return bool
+   * @throws Exception
+   */
+  public function setUseEmployeeGroupParentAccessLevel(string $group_id, bool $is_use_parent_access_level)
+  {
+    $set = new Set($this->options);
 
-        if (!$result) {
-            $this->logger->critical($set->getLastError()->getMessage());
-            throw new \Exception(current($set->getLastError())->getMessage());
-        }
+    $args = [
+      'employee_group_id' => $group_id,
+      'is_use_parent_access_level' => $is_use_parent_access_level
+    ];
 
-        return true;
+    $structure = $this->setStructure(new SetUseEmployeeGroupParentAccessLevel(), $args);
+    $result = $set->SetUseEmployeeGroupParentAccessLevel($structure);
+
+    if (!$result) {
+      throw new Exception($set->getLastError());
     }
 
-    public function addKeyForEmployee(array $args)
-    {
-        $assign = new Assign($this->options);
+    return true;
+  }
 
-        if (isset($args['key_data']))
-            $args['key_data'] = $this->setStructure(new AcsKeySaveData(), $args['key_data']);
+  public function getEventsByDto(GetEventsDto $dto = null)
+  {
+    $get = new Get($this->options);
 
-        $structure = $this->setStructure(new AssignAcsKeyForEmployee(), $args);
-        $result = $assign->AssignAcsKeyForEmployee($structure);
+    $args = array_merge(
+      (array) $dto,
+      [
+        'msgSubTypes' => $dto->subTypes ? new ArrayOfLogMsgSubType($dto->subTypes) : null
+      ]
+    );
+    $structure = $this->setStructure(
+      new GetEvents(),
+      $args
+    );
+//    wovemaj970@govinput.com
+    $result = $get->GetEvents($structure);
 
-        if (!$result) {
-            $this->logger->critical($assign->getLastError()->getMessage());
-            throw new \Exception(current($assign->getLastError())->getMessage());
-        }
-
-        return true;
+    if (!$result) {
+      throw new Exception($get->getLastError());
     }
 
-    // Group
-
-    public function createGroup(array $args)
-    {
-        $add = new Add($this->options);
-
-        $structure = $this->setStructure(new AddAcsEmployeeGroup(), $args);
-
-        $result = $add->AddAcsEmployeeGroup($structure);
-
-        if (!$result) {
-            $this->logger->critical($add->getLastError()->getMessage());
-            throw new \Exception(current($add->getLastError())->getMessage());
-        }
-
-        return $add->getResult()->getAddAcsEmployeeGroupResult();
-    }
-
-    public function SetUseEmployeeGroupParentAccessLevel(array $args)
-    {
-        $set = new Set($this->options);
-
-        $structure = $this->setStructure(new SetUseEmployeeGroupParentAccessLevel(), $args);
-        $result = $set->SetUseEmployeeGroupParentAccessLevel($structure);
-
-        if (!$result) {
-            $this->logger->critical($set->getLastError()->getMessage());
-            throw new \Exception(current($set->getLastError())->getMessage());
-        }
-
-        return true;
-    }
+      return (array) $result->getGetEventsResult()->getMessages()->getLogMessage();
+  }
 }

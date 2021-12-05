@@ -27,11 +27,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFields = $this->getSoapClient()->__soapCall('GetFields', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFields;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -49,11 +49,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAdditionalFieldsValue = $this->getSoapClient()->__soapCall('GetAdditionalFieldsValue', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAdditionalFieldsValue;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -71,11 +71,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAdditionalFields = $this->getSoapClient()->__soapCall('GetAdditionalFields', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAdditionalFields;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -93,11 +93,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAdditionalFieldsValueForOwners = $this->getSoapClient()->__soapCall('GetAdditionalFieldsValueForOwners', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAdditionalFieldsValueForOwners;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -115,11 +115,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAdditionalFieldsForOwners = $this->getSoapClient()->__soapCall('GetAdditionalFieldsForOwners', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAdditionalFieldsForOwners;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -137,11 +137,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPhotoOrders = $this->getSoapClient()->__soapCall('GetPhotoOrders', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPhotoOrders;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -159,11 +159,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTagsByMifareProfileID = $this->getSoapClient()->__soapCall('GetTagsByMifareProfileID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTagsByMifareProfileID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -181,11 +181,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTagsByReportID = $this->getSoapClient()->__soapCall('GetTagsByReportID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTagsByReportID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -203,11 +203,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTagsByEmployeeGroupID = $this->getSoapClient()->__soapCall('GetTagsByEmployeeGroupID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTagsByEmployeeGroupID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -225,11 +225,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTagsByAccessLevelID = $this->getSoapClient()->__soapCall('GetTagsByAccessLevelID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTagsByAccessLevelID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -247,11 +247,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTagsByBoxAccessLevelID = $this->getSoapClient()->__soapCall('GetTagsByBoxAccessLevelID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTagsByBoxAccessLevelID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -269,11 +269,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTagsByResourceID = $this->getSoapClient()->__soapCall('GetTagsByResourceID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTagsByResourceID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -291,11 +291,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFilterTagsByResourceID = $this->getSoapClient()->__soapCall('GetFilterTagsByResourceID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFilterTagsByResourceID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -313,11 +313,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFilterTagsForResources = $this->getSoapClient()->__soapCall('GetFilterTagsForResources', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFilterTagsForResources;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -335,11 +335,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTags = $this->getSoapClient()->__soapCall('GetTags', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTags;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -357,11 +357,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFilterTags = $this->getSoapClient()->__soapCall('GetFilterTags', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFilterTags;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -379,11 +379,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFavoriteFolders = $this->getSoapClient()->__soapCall('GetFavoriteFolders', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFavoriteFolders;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -401,11 +401,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFavoriteFoldersByWorkplace = $this->getSoapClient()->__soapCall('GetFavoriteFoldersByWorkplace', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFavoriteFoldersByWorkplace;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -424,11 +424,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFavoriteFoldersWithEmployeeGroups = $this->getSoapClient()->__soapCall('GetFavoriteFoldersWithEmployeeGroups', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFavoriteFoldersWithEmployeeGroups;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -447,11 +447,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFavoriteFoldersWithEmployeeGroupsByWorkplace = $this->getSoapClient()->__soapCall('GetFavoriteFoldersWithEmployeeGroupsByWorkplace', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFavoriteFoldersWithEmployeeGroupsByWorkplace;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -469,11 +469,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFavoriteFolderForEmployeeGroup = $this->getSoapClient()->__soapCall('GetFavoriteFolderForEmployeeGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFavoriteFolderForEmployeeGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -492,11 +492,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFavoriteFolderForEmployeeGroupByWorkplace = $this->getSoapClient()->__soapCall('GetFavoriteFolderForEmployeeGroupByWorkplace', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFavoriteFolderForEmployeeGroupByWorkplace;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -514,11 +514,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUserPasses = $this->getSoapClient()->__soapCall('GetUserPasses', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUserPasses;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -536,11 +536,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReactions = $this->getSoapClient()->__soapCall('GetReactions', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReactions;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -558,11 +558,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReactionFullInfo = $this->getSoapClient()->__soapCall('GetReactionFullInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReactionFullInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -580,11 +580,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeesOfReactionAction = $this->getSoapClient()->__soapCall('GetEmployeesOfReactionAction', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeesOfReactionAction;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -602,11 +602,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeGroupsOfReactionAction = $this->getSoapClient()->__soapCall('GetEmployeeGroupsOfReactionAction', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeGroupsOfReactionAction;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -624,11 +624,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReactionSendSMSAction = $this->getSoapClient()->__soapCall('GetReactionSendSMSAction', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReactionSendSMSAction;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -646,11 +646,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReactionSendEmailAction = $this->getSoapClient()->__soapCall('GetReactionSendEmailAction', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReactionSendEmailAction;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -668,11 +668,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReactionExecuteProgramAction = $this->getSoapClient()->__soapCall('GetReactionExecuteProgramAction', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReactionExecuteProgramAction;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -690,11 +690,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReactionRecordVideoAction = $this->getSoapClient()->__soapCall('GetReactionRecordVideoAction', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReactionRecordVideoAction;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -712,11 +712,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReports = $this->getSoapClient()->__soapCall('GetReports', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReports;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -734,11 +734,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDriversOfReportParameters = $this->getSoapClient()->__soapCall('GetDriversOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDriversOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -757,11 +757,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLogMessageSubtypesOfReportParameters = $this->getSoapClient()->__soapCall('GetLogMessageSubtypesOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLogMessageSubtypesOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -779,11 +779,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeesOfReportParameters = $this->getSoapClient()->__soapCall('GetEmployeesOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeesOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -802,11 +802,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeGroupsOfReportParameters = $this->getSoapClient()->__soapCall('GetEmployeeGroupsOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeGroupsOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -824,11 +824,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZonesOfReportParameters = $this->getSoapClient()->__soapCall('GetWorkZonesOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZonesOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -846,11 +846,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIncidentTypeOfReportParameters = $this->getSoapClient()->__soapCall('GetIncidentTypeOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIncidentTypeOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -868,11 +868,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetVehicleTypesOfReportParameters = $this->getSoapClient()->__soapCall('GetVehicleTypesOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetVehicleTypesOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -890,11 +890,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetVehiclesOfReportParameters = $this->getSoapClient()->__soapCall('GetVehiclesOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetVehiclesOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -912,11 +912,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetBranchOfReportParameters = $this->getSoapClient()->__soapCall('GetBranchOfReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetBranchOfReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -934,11 +934,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeesOfReactionEvent = $this->getSoapClient()->__soapCall('GetEmployeesOfReactionEvent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeesOfReactionEvent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -956,11 +956,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeGroupsOfReactionEvent = $this->getSoapClient()->__soapCall('GetEmployeeGroupsOfReactionEvent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeGroupsOfReactionEvent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -978,11 +978,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDriversOfReactionEvent = $this->getSoapClient()->__soapCall('GetDriversOfReactionEvent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDriversOfReactionEvent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1001,11 +1001,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLogMessageSubtypesOfReactionEvent = $this->getSoapClient()->__soapCall('GetLogMessageSubtypesOfReactionEvent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLogMessageSubtypesOfReactionEvent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1024,11 +1024,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetSwitchedOffLogMessageSubtypesOfWorkplace = $this->getSoapClient()->__soapCall('GetSwitchedOffLogMessageSubtypesOfWorkplace', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetSwitchedOffLogMessageSubtypesOfWorkplace;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1047,11 +1047,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetSwitchedOffLogDriversOfWorkplace = $this->getSoapClient()->__soapCall('GetSwitchedOffLogDriversOfWorkplace', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetSwitchedOffLogDriversOfWorkplace;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1070,11 +1070,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetRemoteTerminalInfoByWorkplaceModuleId = $this->getSoapClient()->__soapCall('GetRemoteTerminalInfoByWorkplaceModuleId', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetRemoteTerminalInfoByWorkplaceModuleId;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1092,11 +1092,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReactionEventsFromDevices = $this->getSoapClient()->__soapCall('GetReactionEventsFromDevices', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReactionEventsFromDevices;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1114,11 +1114,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLicense = $this->getSoapClient()->__soapCall('GetLicense', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLicense;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1136,11 +1136,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPageFilteredEmployeesByGroup = $this->getSoapClient()->__soapCall('GetPageFilteredEmployeesByGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPageFilteredEmployeesByGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1158,11 +1158,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPageFilterredIncidents = $this->getSoapClient()->__soapCall('GetPageFilterredIncidents', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPageFilterredIncidents;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1180,11 +1180,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeesGuidsByGroups = $this->getSoapClient()->__soapCall('GetAcsEmployeesGuidsByGroups', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeesGuidsByGroups;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1202,11 +1202,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployee = $this->getSoapClient()->__soapCall('GetAcsEmployee', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployee;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1224,11 +1224,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeForRemoteTerminal = $this->getSoapClient()->__soapCall('GetAcsEmployeeForRemoteTerminal', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeForRemoteTerminal;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1246,11 +1246,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeesByTableNumbers = $this->getSoapClient()->__soapCall('GetAcsEmployeesByTableNumbers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeesByTableNumbers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1268,11 +1268,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeIDsByTableNumbers = $this->getSoapClient()->__soapCall('GetAcsEmployeeIDsByTableNumbers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeIDsByTableNumbers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1290,11 +1290,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeesDocuments = $this->getSoapClient()->__soapCall('GetAcsEmployeesDocuments', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeesDocuments;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1312,11 +1312,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeePhotoInfos = $this->getSoapClient()->__soapCall('GetAcsEmployeePhotoInfos', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeePhotoInfos;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1334,11 +1334,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeePhoto = $this->getSoapClient()->__soapCall('GetAcsEmployeePhoto', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeePhoto;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1356,11 +1356,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeePhotoByType = $this->getSoapClient()->__soapCall('GetAcsEmployeePhotoByType', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeePhotoByType;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1378,11 +1378,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeesByAccessLevel = $this->getSoapClient()->__soapCall('GetEmployeesByAccessLevel', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeesByAccessLevel;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1400,11 +1400,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsKeysForEmployee = $this->getSoapClient()->__soapCall('GetAcsKeysForEmployee', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsKeysForEmployee;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1422,11 +1422,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeesByCardType = $this->getSoapClient()->__soapCall('GetEmployeesByCardType', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeesByCardType;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1444,11 +1444,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAssignedAcsKeyByKeyNumber = $this->getSoapClient()->__soapCall('GetAssignedAcsKeyByKeyNumber', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAssignedAcsKeyByKeyNumber;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1466,11 +1466,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsKeysForEmployeeWithLost = $this->getSoapClient()->__soapCall('GetAcsKeysForEmployeeWithLost', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsKeysForEmployeeWithLost;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1489,11 +1489,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsKeysForEmployeeWithLostIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetAcsKeysForEmployeeWithLostIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsKeysForEmployeeWithLostIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1511,11 +1511,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUnResolvedPhotoBankDetails = $this->getSoapClient()->__soapCall('GetUnResolvedPhotoBankDetails', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUnResolvedPhotoBankDetails;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1533,11 +1533,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPhoto = $this->getSoapClient()->__soapCall('GetPhoto', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPhoto;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1555,11 +1555,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsVehiclesByGroup = $this->getSoapClient()->__soapCall('GetAcsVehiclesByGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsVehiclesByGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1577,11 +1577,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsVehiclesGuidsByGroups = $this->getSoapClient()->__soapCall('GetAcsVehiclesGuidsByGroups', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsVehiclesGuidsByGroups;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1599,11 +1599,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsVehicle = $this->getSoapClient()->__soapCall('GetAcsVehicle', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsVehicle;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1621,11 +1621,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkTimeTable = $this->getSoapClient()->__soapCall('GetWorkTimeTable', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkTimeTable;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1643,11 +1643,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeTimeTable = $this->getSoapClient()->__soapCall('GetEmployeeTimeTable', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeTimeTable;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1665,11 +1665,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDayTypesSlimInfo = $this->getSoapClient()->__soapCall('GetDayTypesSlimInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDayTypesSlimInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1687,11 +1687,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkSchedulesSlimInfo = $this->getSoapClient()->__soapCall('GetWorkSchedulesSlimInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkSchedulesSlimInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1709,11 +1709,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZonesSlimInfo = $this->getSoapClient()->__soapCall('GetWorkZonesSlimInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZonesSlimInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1731,11 +1731,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZonesAccessPoints = $this->getSoapClient()->__soapCall('GetWorkZonesAccessPoints', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZonesAccessPoints;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1753,11 +1753,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsBoxAccessElements = $this->getSoapClient()->__soapCall('GetAcsBoxAccessElements', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsBoxAccessElements;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1775,11 +1775,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsBoxAccessLevelsSlimInfo = $this->getSoapClient()->__soapCall('GetAcsBoxAccessLevelsSlimInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsBoxAccessLevelsSlimInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1797,11 +1797,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsAccessLevelsSlimInfo = $this->getSoapClient()->__soapCall('GetAcsAccessLevelsSlimInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsAccessLevelsSlimInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1819,11 +1819,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAlcoGroupsSlimInfo = $this->getSoapClient()->__soapCall('GetAlcoGroupsSlimInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAlcoGroupsSlimInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1841,11 +1841,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeePostionsForAlcoGroup = $this->getSoapClient()->__soapCall('GetEmployeePostionsForAlcoGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeePostionsForAlcoGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1863,11 +1863,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPositionCodes = $this->getSoapClient()->__soapCall('GetPositionCodes', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPositionCodes;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1885,11 +1885,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeGroupsForAlcoGroup = $this->getSoapClient()->__soapCall('GetEmployeeGroupsForAlcoGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeGroupsForAlcoGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1907,11 +1907,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsAccessPointDrivers = $this->getSoapClient()->__soapCall('GetAcsAccessPointDrivers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsAccessPointDrivers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1929,11 +1929,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsAccessPoints = $this->getSoapClient()->__soapCall('GetAcsAccessPoints', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsAccessPoints;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1951,11 +1951,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZonesByDriverID = $this->getSoapClient()->__soapCall('GetWorkZonesByDriverID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZonesByDriverID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1973,11 +1973,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZonesByEmployeeID = $this->getSoapClient()->__soapCall('GetWorkZonesByEmployeeID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZonesByEmployeeID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -1996,11 +1996,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZonesByEmployeeIDIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetWorkZonesByEmployeeIDIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZonesByEmployeeIDIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2018,11 +2018,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZonesByEmployeeGroupID = $this->getSoapClient()->__soapCall('GetWorkZonesByEmployeeGroupID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZonesByEmployeeGroupID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2040,11 +2040,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkSchedulesByEmployeeID = $this->getSoapClient()->__soapCall('GetWorkSchedulesByEmployeeID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkSchedulesByEmployeeID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2063,11 +2063,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkSchedulesByEmployeeIDIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetWorkSchedulesByEmployeeIDIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkSchedulesByEmployeeIDIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2085,11 +2085,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkSchedulesByEmployeeGroupID = $this->getSoapClient()->__soapCall('GetWorkSchedulesByEmployeeGroupID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkSchedulesByEmployeeGroupID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2107,11 +2107,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeForAlcoGroup = $this->getSoapClient()->__soapCall('GetEmployeeForAlcoGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeForAlcoGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2129,11 +2129,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeePageForAlcoGroup = $this->getSoapClient()->__soapCall('GetEmployeePageForAlcoGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeePageForAlcoGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2151,11 +2151,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkplaces = $this->getSoapClient()->__soapCall('GetWorkplaces', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkplaces;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2173,11 +2173,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetISS_IIDKs = $this->getSoapClient()->__soapCall('GetISS_IIDKs', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetISS_IIDKs;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2195,11 +2195,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetISS_Recognition = $this->getSoapClient()->__soapCall('GetISS_Recognition', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetISS_Recognition;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2217,11 +2217,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetISS_Drivers = $this->getSoapClient()->__soapCall('GetISS_Drivers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetISS_Drivers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2239,11 +2239,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetISS_IIDK_Slaves = $this->getSoapClient()->__soapCall('GetISS_IIDK_Slaves', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetISS_IIDK_Slaves;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2261,11 +2261,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGet_ISS_DriverEventsPlayback = $this->getSoapClient()->__soapCall('Get_ISS_DriverEventsPlayback', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGet_ISS_DriverEventsPlayback;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2283,11 +2283,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAllMaps = $this->getSoapClient()->__soapCall('GetAllMaps', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAllMaps;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2305,11 +2305,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetMapById = $this->getSoapClient()->__soapCall('GetMapById', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetMapById;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2327,11 +2327,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetMapImage = $this->getSoapClient()->__soapCall('GetMapImage', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetMapImage;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2350,11 +2350,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsConfiguratorSettingsByWorkplaceModule = $this->getSoapClient()->__soapCall('GetAcsConfiguratorSettingsByWorkplaceModule', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsConfiguratorSettingsByWorkplaceModule;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2373,11 +2373,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetVisitorsScoreboardSettingsByWorkplaceModuleId = $this->getSoapClient()->__soapCall('GetVisitorsScoreboardSettingsByWorkplaceModuleId', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetVisitorsScoreboardSettingsByWorkplaceModuleId;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2395,11 +2395,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetWorkZoneVisitorsCount = $this->getSoapClient()->__soapCall('GetWorkZoneVisitorsCount', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetWorkZoneVisitorsCount;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2417,11 +2417,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUidsKeys = $this->getSoapClient()->__soapCall('GetUidsKeys', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUidsKeys;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2439,11 +2439,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetKeyByUid = $this->getSoapClient()->__soapCall('GetKeyByUid', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetKeyByUid;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2461,11 +2461,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetMifareProfiles = $this->getSoapClient()->__soapCall('GetMifareProfiles', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetMifareProfiles;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2483,11 +2483,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetMifareProfilesFullInfo = $this->getSoapClient()->__soapCall('GetMifareProfilesFullInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetMifareProfilesFullInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2505,11 +2505,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetScreenLayoutForWorkplaceModule = $this->getSoapClient()->__soapCall('GetScreenLayoutForWorkplaceModule', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetScreenLayoutForWorkplaceModule;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2528,11 +2528,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetScreenCellPhotoIdentificationContent = $this->getSoapClient()->__soapCall('GetScreenCellPhotoIdentificationContent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetScreenCellPhotoIdentificationContent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2550,11 +2550,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetScreenCellCameraContent = $this->getSoapClient()->__soapCall('GetScreenCellCameraContent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetScreenCellCameraContent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2572,11 +2572,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIvideonCameraDrivers = $this->getSoapClient()->__soapCall('GetIvideonCameraDrivers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIvideonCameraDrivers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2594,11 +2594,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPhotoidentificationPersonalData = $this->getSoapClient()->__soapCall('GetPhotoidentificationPersonalData', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPhotoidentificationPersonalData;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2616,11 +2616,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmailAddresses = $this->getSoapClient()->__soapCall('GetEmailAddresses', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmailAddresses;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2639,11 +2639,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmailAddressesIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetEmailAddressesIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmailAddressesIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2661,11 +2661,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPhoneNumbers = $this->getSoapClient()->__soapCall('GetPhoneNumbers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPhoneNumbers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2684,11 +2684,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetPhoneNumbersIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetPhoneNumbersIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetPhoneNumbersIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2706,11 +2706,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeSchedules = $this->getSoapClient()->__soapCall('GetEmployeeSchedules', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeSchedules;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2729,11 +2729,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeSchedulesIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetEmployeeSchedulesIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeSchedulesIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2751,11 +2751,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmailDistributionAddresses = $this->getSoapClient()->__soapCall('GetEmailDistributionAddresses', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmailDistributionAddresses;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2773,11 +2773,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetVariable = $this->getSoapClient()->__soapCall('GetVariable', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetVariable;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2795,11 +2795,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetChildrenNets = $this->getSoapClient()->__soapCall('GetChildrenNets', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetChildrenNets;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2817,11 +2817,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAllNets = $this->getSoapClient()->__soapCall('GetAllNets', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAllNets;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2839,11 +2839,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLocalNet = $this->getSoapClient()->__soapCall('GetLocalNet', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLocalNet;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2861,11 +2861,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetNetServers = $this->getSoapClient()->__soapCall('GetNetServers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetNetServers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2883,11 +2883,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetServer = $this->getSoapClient()->__soapCall('GetServer', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetServer;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2905,11 +2905,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetRootServerDrivers = $this->getSoapClient()->__soapCall('GetRootServerDrivers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetRootServerDrivers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2927,11 +2927,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDriversByType = $this->getSoapClient()->__soapCall('GetDriversByType', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDriversByType;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2949,11 +2949,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetServerDriversFullInfo = $this->getSoapClient()->__soapCall('GetServerDriversFullInfo', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetServerDriversFullInfo;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2971,11 +2971,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetNetworkChanges = $this->getSoapClient()->__soapCall('GetNetworkChanges', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetNetworkChanges;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -2993,11 +2993,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetNotify = $this->getSoapClient()->__soapCall('GetNotify', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetNotify;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3015,11 +3015,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDriver = $this->getSoapClient()->__soapCall('GetDriver', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDriver;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3037,11 +3037,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLogMessageTypes = $this->getSoapClient()->__soapCall('GetLogMessageTypes', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLogMessageTypes;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3059,11 +3059,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLogMessageSubtypes = $this->getSoapClient()->__soapCall('GetLogMessageSubtypes', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLogMessageSubtypes;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3081,11 +3081,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEvents = $this->getSoapClient()->__soapCall('GetEvents', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEvents;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3103,11 +3103,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLastEvent = $this->getSoapClient()->__soapCall('GetLastEvent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLastEvent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3125,11 +3125,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEventsByDeviceIDs = $this->getSoapClient()->__soapCall('GetEventsByDeviceIDs', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEventsByDeviceIDs;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3147,11 +3147,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFilteredEvents = $this->getSoapClient()->__soapCall('GetFilteredEvents', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFilteredEvents;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3169,11 +3169,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLastEventByDeviceIDs = $this->getSoapClient()->__soapCall('GetLastEventByDeviceIDs', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLastEventByDeviceIDs;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3191,11 +3191,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEventsByDeviceTypes = $this->getSoapClient()->__soapCall('GetEventsByDeviceTypes', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEventsByDeviceTypes;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3213,11 +3213,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetLastEventByDeviceTypes = $this->getSoapClient()->__soapCall('GetLastEventByDeviceTypes', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetLastEventByDeviceTypes;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3235,11 +3235,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUser = $this->getSoapClient()->__soapCall('GetUser', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUser;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3257,11 +3257,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetOperator = $this->getSoapClient()->__soapCall('GetOperator', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetOperator;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3279,11 +3279,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUsers = $this->getSoapClient()->__soapCall('GetUsers', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUsers;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3301,11 +3301,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUserGroup = $this->getSoapClient()->__soapCall('GetUserGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUserGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3323,11 +3323,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUserGroups = $this->getSoapClient()->__soapCall('GetUserGroups', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUserGroups;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3345,11 +3345,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUserGroupsByUserID = $this->getSoapClient()->__soapCall('GetUserGroupsByUserID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUserGroupsByUserID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3367,11 +3367,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetUsersByUserGroupID = $this->getSoapClient()->__soapCall('GetUsersByUserGroupID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetUsersByUserGroupID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3389,11 +3389,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetClaim = $this->getSoapClient()->__soapCall('GetClaim', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetClaim;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3411,11 +3411,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetClaimsForUserGroup = $this->getSoapClient()->__soapCall('GetClaimsForUserGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetClaimsForUserGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3433,11 +3433,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetClaimsForUserByUserId = $this->getSoapClient()->__soapCall('GetClaimsForUserByUserId', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetClaimsForUserByUserId;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3455,11 +3455,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetClaimsForUserByUserLogin = $this->getSoapClient()->__soapCall('GetClaimsForUserByUserLogin', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetClaimsForUserByUserLogin;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3477,11 +3477,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsDaySchedules = $this->getSoapClient()->__soapCall('GetAcsDaySchedules', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsDaySchedules;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3499,11 +3499,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsDaySchedulesByOwner = $this->getSoapClient()->__soapCall('GetAcsDaySchedulesByOwner', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsDaySchedulesByOwner;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3521,11 +3521,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsDaySchedule = $this->getSoapClient()->__soapCall('GetAcsDaySchedule', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsDaySchedule;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3543,11 +3543,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsDayScheduleByOwner = $this->getSoapClient()->__soapCall('GetAcsDayScheduleByOwner', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsDayScheduleByOwner;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3565,11 +3565,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsMultiDaySchedules = $this->getSoapClient()->__soapCall('GetAcsMultiDaySchedules', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsMultiDaySchedules;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3587,11 +3587,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsMultiDaySchedule = $this->getSoapClient()->__soapCall('GetAcsMultiDaySchedule', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsMultiDaySchedule;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3609,11 +3609,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsWeekSlimSchedules = $this->getSoapClient()->__soapCall('GetAcsWeekSlimSchedules', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsWeekSlimSchedules;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3631,11 +3631,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsWeekFullSchedules = $this->getSoapClient()->__soapCall('GetAcsWeekFullSchedules', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsWeekFullSchedules;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3653,11 +3653,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsWeekSchedule = $this->getSoapClient()->__soapCall('GetAcsWeekSchedule', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsWeekSchedule;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3675,11 +3675,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsCustomDays = $this->getSoapClient()->__soapCall('GetAcsCustomDays', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsCustomDays;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3697,11 +3697,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsCustomDay = $this->getSoapClient()->__soapCall('GetAcsCustomDay', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsCustomDay;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3719,11 +3719,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsWorkDaysWithTransfer = $this->getSoapClient()->__soapCall('GetAcsWorkDaysWithTransfer', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsWorkDaysWithTransfer;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3741,11 +3741,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsWorkDayWithTransfer = $this->getSoapClient()->__soapCall('GetAcsWorkDayWithTransfer', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsWorkDayWithTransfer;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3763,11 +3763,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDictionaryElement = $this->getSoapClient()->__soapCall('GetDictionaryElement', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDictionaryElement;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3785,11 +3785,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDictionaryElements = $this->getSoapClient()->__soapCall('GetDictionaryElements', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDictionaryElements;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3807,11 +3807,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetCardType = $this->getSoapClient()->__soapCall('GetCardType', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetCardType;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3829,11 +3829,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAllBranch = $this->getSoapClient()->__soapCall('GetAllBranch', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAllBranch;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3851,11 +3851,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetBranch = $this->getSoapClient()->__soapCall('GetBranch', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetBranch;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3873,11 +3873,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIncidents = $this->getSoapClient()->__soapCall('GetIncidents', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIncidents;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3895,11 +3895,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIncident = $this->getSoapClient()->__soapCall('GetIncident', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIncident;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3917,11 +3917,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIncidentTemplates = $this->getSoapClient()->__soapCall('GetIncidentTemplates', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIncidentTemplates;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3939,11 +3939,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetOrganizationForEmployee = $this->getSoapClient()->__soapCall('GetOrganizationForEmployee', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetOrganizationForEmployee;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3961,11 +3961,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetSubdivisionsForEmployee = $this->getSoapClient()->__soapCall('GetSubdivisionsForEmployee', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetSubdivisionsForEmployee;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -3984,11 +3984,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetOrganizationAssignmentsForEmployee = $this->getSoapClient()->__soapCall('GetOrganizationAssignmentsForEmployee', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetOrganizationAssignmentsForEmployee;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4007,11 +4007,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetOrganizationAssignmentsForEmployeeIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetOrganizationAssignmentsForEmployeeIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetOrganizationAssignmentsForEmployeeIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4029,11 +4029,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetOrganizationForVehicle = $this->getSoapClient()->__soapCall('GetOrganizationForVehicle', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetOrganizationForVehicle;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4051,11 +4051,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetSubdivisionsForVehicle = $this->getSoapClient()->__soapCall('GetSubdivisionsForVehicle', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetSubdivisionsForVehicle;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4074,11 +4074,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetOrganizationAssignmentsForVehicle = $this->getSoapClient()->__soapCall('GetOrganizationAssignmentsForVehicle', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetOrganizationAssignmentsForVehicle;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4096,11 +4096,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetCardTypes = $this->getSoapClient()->__soapCall('GetCardTypes', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetCardTypes;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4118,11 +4118,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeePosition = $this->getSoapClient()->__soapCall('GetEmployeePosition', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeePosition;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4140,11 +4140,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeePositions = $this->getSoapClient()->__soapCall('GetEmployeePositions', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeePositions;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4162,11 +4162,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeePositionsForIncident = $this->getSoapClient()->__soapCall('GetEmployeePositionsForIncident', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeePositionsForIncident;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4184,11 +4184,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeGroupsFull = $this->getSoapClient()->__soapCall('GetAcsEmployeeGroupsFull', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeGroupsFull;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4206,11 +4206,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeGroups = $this->getSoapClient()->__soapCall('GetAcsEmployeeGroups', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeGroups;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4228,11 +4228,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetViolatorAcsEmployeeGroup = $this->getSoapClient()->__soapCall('GetViolatorAcsEmployeeGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetViolatorAcsEmployeeGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4250,11 +4250,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeGroupsByTags = $this->getSoapClient()->__soapCall('GetAcsEmployeeGroupsByTags', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeGroupsByTags;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4272,11 +4272,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeGroup = $this->getSoapClient()->__soapCall('GetAcsEmployeeGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4295,11 +4295,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeGroupsForReportParameters = $this->getSoapClient()->__soapCall('GetAcsEmployeeGroupsForReportParameters', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeGroupsForReportParameters;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4318,11 +4318,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeGroupsForReactionEvent = $this->getSoapClient()->__soapCall('GetAcsEmployeeGroupsForReactionEvent', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeGroupsForReactionEvent;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4341,11 +4341,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeeGroupsForReactionAction = $this->getSoapClient()->__soapCall('GetAcsEmployeeGroupsForReactionAction', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeeGroupsForReactionAction;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4363,11 +4363,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeesByGroup = $this->getSoapClient()->__soapCall('GetAcsEmployeesByGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeesByGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4385,11 +4385,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployees = $this->getSoapClient()->__soapCall('GetAcsEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4407,11 +4407,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeFaceById = $this->getSoapClient()->__soapCall('GetEmployeeFaceById', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeFaceById;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4429,11 +4429,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeFaces = $this->getSoapClient()->__soapCall('GetEmployeeFaces', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeFaces;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4452,11 +4452,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeFacesIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetEmployeeFacesIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeFacesIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4474,11 +4474,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeeFacesFull = $this->getSoapClient()->__soapCall('GetEmployeeFacesFull', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeeFacesFull;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4496,11 +4496,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAcsEmployeesByGroups = $this->getSoapClient()->__soapCall('GetAcsEmployeesByGroups', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAcsEmployeesByGroups;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4518,11 +4518,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetListAcsEmployeesByGroup = $this->getSoapClient()->__soapCall('GetListAcsEmployeesByGroup', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetListAcsEmployeesByGroup;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4540,11 +4540,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetNotification = $this->getSoapClient()->__soapCall('GetNotification', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetNotification;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4562,11 +4562,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetViolationPlan = $this->getSoapClient()->__soapCall('GetViolationPlan', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetViolationPlan;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4584,11 +4584,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetReportingServicesUrl = $this->getSoapClient()->__soapCall('GetReportingServicesUrl', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetReportingServicesUrl;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4606,11 +4606,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIncidentArchiveReport = $this->getSoapClient()->__soapCall('GetIncidentArchiveReport', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIncidentArchiveReport;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4628,11 +4628,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIncidentStatisticReport = $this->getSoapClient()->__soapCall('GetIncidentStatisticReport', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIncidentStatisticReport;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4650,11 +4650,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIncidentStatisticReportByWeek = $this->getSoapClient()->__soapCall('GetIncidentStatisticReportByWeek', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIncidentStatisticReportByWeek;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4672,11 +4672,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetSecureOSCameras = $this->getSoapClient()->__soapCall('GetSecureOSCameras', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetSecureOSCameras;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4694,11 +4694,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetKeyKeeperSlotsStatus = $this->getSoapClient()->__soapCall('GetKeyKeeperSlotsStatus', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetKeyKeeperSlotsStatus;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4716,11 +4716,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetKeyLocation = $this->getSoapClient()->__soapCall('GetKeyLocation', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetKeyLocation;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4739,11 +4739,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetControllerConfigurationsViaCanConverter = $this->getSoapClient()->__soapCall('GetControllerConfigurationsViaCanConverter', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetControllerConfigurationsViaCanConverter;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4762,11 +4762,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAccessPoint2CameraForAccessPoint = $this->getSoapClient()->__soapCall('GetAccessPoint2CameraForAccessPoint', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAccessPoint2CameraForAccessPoint;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4784,11 +4784,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetVehicleForEmployee = $this->getSoapClient()->__soapCall('GetVehicleForEmployee', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetVehicleForEmployee;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4807,11 +4807,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetVehicleForEmployeeIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetVehicleForEmployeeIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetVehicleForEmployeeIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4829,11 +4829,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetEmployeesForVehicle = $this->getSoapClient()->__soapCall('GetEmployeesForVehicle', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetEmployeesForVehicle;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4851,11 +4851,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAccessLevelsByEmployeeID = $this->getSoapClient()->__soapCall('GetAccessLevelsByEmployeeID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAccessLevelsByEmployeeID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4874,11 +4874,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAccessLevelsByEmployeeIDIncludeRemovedEmployees = $this->getSoapClient()->__soapCall('GetAccessLevelsByEmployeeIDIncludeRemovedEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAccessLevelsByEmployeeIDIncludeRemovedEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4896,11 +4896,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAccessLevelsByDriverID = $this->getSoapClient()->__soapCall('GetAccessLevelsByDriverID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAccessLevelsByDriverID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4918,11 +4918,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetBiometricPermissions = $this->getSoapClient()->__soapCall('GetBiometricPermissions', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetBiometricPermissions;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4940,11 +4940,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAccessLevelsByEmployeeGroupID = $this->getSoapClient()->__soapCall('GetAccessLevelsByEmployeeGroupID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAccessLevelsByEmployeeGroupID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4963,11 +4963,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAllAccessLevelsByEmployeeGroupID = $this->getSoapClient()->__soapCall('GetAllAccessLevelsByEmployeeGroupID', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAllAccessLevelsByEmployeeGroupID;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -4985,11 +4985,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetKeysChanges = $this->getSoapClient()->__soapCall('GetKeysChanges', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetKeysChanges;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5007,11 +5007,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetCustomizableDaysChanges = $this->getSoapClient()->__soapCall('GetCustomizableDaysChanges', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetCustomizableDaysChanges;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5029,11 +5029,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetTagsByClaim = $this->getSoapClient()->__soapCall('GetTagsByClaim', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetTagsByClaim;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5051,11 +5051,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetFilteredEmployees = $this->getSoapClient()->__soapCall('GetFilteredEmployees', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetFilteredEmployees;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5073,11 +5073,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDepartmentTree = $this->getSoapClient()->__soapCall('GetDepartmentTree', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDepartmentTree;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5095,11 +5095,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDataForPeriodByDepartments = $this->getSoapClient()->__soapCall('GetDataForPeriodByDepartments', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDataForPeriodByDepartments;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5118,11 +5118,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDataForPeriodByDepartmentsDetail = $this->getSoapClient()->__soapCall('GetDataForPeriodByDepartmentsDetail', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDataForPeriodByDepartmentsDetail;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5140,11 +5140,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetIsPresentInWorkplace = $this->getSoapClient()->__soapCall('GetIsPresentInWorkplace', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetIsPresentInWorkplace;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5162,11 +5162,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetAbscenceInWorkplace = $this->getSoapClient()->__soapCall('GetAbscenceInWorkplace', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetAbscenceInWorkplace;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5184,11 +5184,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetDataForGraph = $this->getSoapClient()->__soapCall('GetDataForGraph', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetDataForGraph;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5206,11 +5206,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetProblemDates = $this->getSoapClient()->__soapCall('GetProblemDates', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetProblemDates;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5228,11 +5228,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetSystematicViolation = $this->getSoapClient()->__soapCall('GetSystematicViolation', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetSystematicViolation;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5250,11 +5250,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetSystematicViolationByLogin = $this->getSoapClient()->__soapCall('GetSystematicViolationByLogin', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetSystematicViolationByLogin;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5272,11 +5272,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetListOfViolations = $this->getSoapClient()->__soapCall('GetListOfViolations', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetListOfViolations;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
@@ -5294,11 +5294,11 @@ class Get extends AbstractSoapClientBase
             $this->setResult($resultGetListOfViolationsByLogin = $this->getSoapClient()->__soapCall('GetListOfViolationsByLogin', [
                 $parameters,
             ], [], [], $this->outputHeaders));
-        
+
             return $resultGetListOfViolationsByLogin;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
-        
+
             return false;
         }
     }
