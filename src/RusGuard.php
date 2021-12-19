@@ -4,29 +4,27 @@ namespace lVinokurov\RusGuard;
 
 use ArrayType\ArrayOfguid;
 use ArrayType\ArrayOfLogMsgSubType;
-use ArrayType\ArrayOfLogMsgType;
 use Exception;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
-use lVinokurov\RusGuard\Dto\Employee\CreateEmployeeDto;
+use lVinokurov\RusGuard\Dto\Employee\SaveEmployeeDto;
+use lVinokurov\RusGuard\Dto\Employee\EmployeeDto;
 use lVinokurov\RusGuard\Dto\Events\GetEventsDto;
-use lVinokurov\RusGuard\Dto\Group\CreateGroupDto;
+use lVinokurov\RusGuard\Dto\Group\GroupDto;
 use ServiceType\Add;
 use ServiceType\Assign;
 use ServiceType\Get;
 use ServiceType\Lock;
+use ServiceType\Save;
 use ServiceType\Set;
 use StructType\AcsEmployeeGroup;
+use StructType\AcsEmployeeSaveData;
 use StructType\AcsEmployeeSlim;
 use StructType\AcsKeySaveData;
 use StructType\AddAcsEmployeeGroup;
 use StructType\AssignAcsKeyForEmployee;
 use StructType\GetEvents;
-use StructType\GetEventsByDeviceIDs;
-use StructType\GetLogMessageSubtypes;
-use StructType\GetLogMessageTypes;
-use StructType\GetSwitchedOffLogMessageSubtypesOfWorkplace;
 use StructType\LockAcsEmployee;
+use StructType\SaveAcsEmployee;
 use StructType\SetUseEmployeeGroupParentAccessLevel;
 
 class RusGuard
@@ -84,12 +82,12 @@ class RusGuard
   /**
    * Создание работника
    *
-   * @param CreateEmployeeDto $dto
+   * @param EmployeeDto $dto
    * @param string $group_id
    * @return AcsEmployeeSlim|null
    * @throws Exception
    */
-  public function createEmployee(CreateEmployeeDto $dto, string $group_id)
+  public function createEmployee(EmployeeDto $dto, string $group_id): ?AcsEmployeeSlim
   {
     $add = new Add($this->options);
 
@@ -106,13 +104,38 @@ class RusGuard
   }
 
   /**
+   * Обновление пользовательских данных
+   *
+   * @param SaveEmployeeDto $dto
+   * @return bool
+   * @throws Exception
+   */
+  public function saveEmployee(SaveEmployeeDto $dto): bool
+  {
+    $save = new Save($this->options);
+
+    $data = $this->setStructure(new AcsEmployeeSaveData(), (array) $dto->data);
+
+    $result = $save->SaveAcsEmployee(new SaveAcsEmployee(
+      $dto->id,
+      $data
+    ));
+
+    if (!$result) {
+      throw new Exception($save->getLastError());
+    }
+
+    return true;
+  }
+
+  /**
    * Блокировка или разблокировка работника
    *
    * @param array $args
    * @return bool
    * @throws Exception
    */
-  public function lockEmployee(array $args)
+  public function lockEmployee(array $args): bool
   {
     $lock = new Lock($this->options);
     $args['ids'] = new ArrayOfguid(is_array($args['ids']) ? $args['ids'] : [$args['ids']]);
@@ -135,7 +158,7 @@ class RusGuard
    * @return bool
    * @throws Exception
    */
-  public function createEmployeePhoto(array $args)
+  public function createEmployeePhoto(array $args): bool
   {
     $set = new Set($this->options);
     $structure = $this->setStructure(new \StructType\SetAcsEmployeePhoto(), $args);
@@ -156,7 +179,7 @@ class RusGuard
    * @return bool
    * @throws Exception
    */
-  public function addKeyForEmployee(array $args)
+  public function addKeyForEmployee(array $args): bool
   {
     $assign = new Assign($this->options);
 
@@ -176,11 +199,11 @@ class RusGuard
   /**
    * Создание группы
    *
-   * @param CreateGroupDto $dto
+   * @param GroupDto $dto
    * @return AcsEmployeeGroup|null
    * @throws Exception
    */
-  public function createGroup(CreateGroupDto $dto)
+  public function createGroup(GroupDto $dto): ?AcsEmployeeGroup
   {
     $add = new Add($this->options);
 
@@ -203,7 +226,7 @@ class RusGuard
    * @return bool
    * @throws Exception
    */
-  public function setUseEmployeeGroupParentAccessLevel(string $group_id, bool $is_use_parent_access_level)
+  public function setUseEmployeeGroupParentAccessLevel(string $group_id, bool $is_use_parent_access_level): bool
   {
     $set = new Set($this->options);
 
@@ -222,7 +245,14 @@ class RusGuard
     return true;
   }
 
-  public function getEventsByDto(GetEventsDto $dto = null)
+  /**
+   * Выгрузка событий с сервера русгарда
+   *
+   * @param GetEventsDto|null $dto
+   * @return array
+   * @throws Exception
+   */
+  public function getEventsByDto(GetEventsDto $dto = null): array
   {
     $get = new Get($this->options);
 
@@ -236,7 +266,7 @@ class RusGuard
       new GetEvents(),
       $args
     );
-//    wovemaj970@govinput.com
+
     $result = $get->GetEvents($structure);
 
     if (!$result) {

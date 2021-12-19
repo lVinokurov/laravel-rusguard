@@ -3084,6 +3084,7 @@ class Get extends AbstractSoapClientBase
 
             return $resultGetEvents;
         } catch (SoapFault $soapFault) {
+          dd($soapFault->getMessage());
             $this->saveLastError(__METHOD__, $soapFault);
 
             return false;
