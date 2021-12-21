@@ -10,6 +10,7 @@ use lVinokurov\RusGuard\Dto\Employee\SaveEmployeeDto;
 use lVinokurov\RusGuard\Dto\Employee\EmployeeDto;
 use lVinokurov\RusGuard\Dto\Events\GetEventsDto;
 use lVinokurov\RusGuard\Dto\Group\GroupDto;
+use lVinokurov\RusGuard\Dto\Group\SaveGroupDto;
 use ServiceType\Add;
 use ServiceType\Assign;
 use ServiceType\Get;
@@ -25,6 +26,7 @@ use StructType\AssignAcsKeyForEmployee;
 use StructType\GetEvents;
 use StructType\LockAcsEmployee;
 use StructType\SaveAcsEmployee;
+use StructType\SaveAcsEmployeeGroup;
 use StructType\SetUseEmployeeGroupParentAccessLevel;
 
 class RusGuard
@@ -216,6 +218,21 @@ class RusGuard
     }
 
     return $add->getResult()->getAddAcsEmployeeGroupResult();
+  }
+
+  public function saveGroup(SaveGroupDto $dto)
+  {
+      $save = new Save($this->options);
+
+      $data = $this->setStructure(new SaveAcsEmployeeGroup(), (array) $dto);
+
+      $result = $save->SaveAcsEmployeeGroup($data);
+
+      if (!$result) {
+          throw new Exception($save->getLastError());
+      }
+
+      return true;
   }
 
   /**
